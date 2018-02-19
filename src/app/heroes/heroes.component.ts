@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Heroe } from '../heroe';
+import { HeroeBE } from '../heroe';
+import { ListaHeroes } from '../heroe-data';
 
 @Component({
   selector: 'app-heroes',
@@ -8,9 +9,17 @@ import { Heroe } from '../heroe';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroe : Heroe = {
-    id: 1,
-    nombre: 'Moises HR'
+  // heroe : HeroeBE = {
+  //   id: 1,
+  //   nombre: 'Moises HR'
+  // }
+
+  heroes = ListaHeroes;
+
+  seleccionadoHeroe: HeroeBE;
+
+  onSelect(heroe: HeroeBE): void {
+    this.seleccionadoHeroe = heroe;
   }
 
   constructor() { 
