@@ -7,13 +7,4 @@
   </li>
 </ul>
 
-<div *ngIf="seleccionadoHeroe">
-    <h2>{{ seleccionadoHeroe.nombre | uppercase }} Detalle</h2>
-    <div><span>id: </span>{{seleccionadoHeroe.id}}</div>
-    <div><span>nombre: </span>{{seleccionadoHeroe.nombre}}</div>
-    <div>
-      <label>nombre:
-        <input [(ngModel)]="seleccionadoHeroe.nombre" placehorder="Ingrese nombre">
-      </label>
-    </div>
-</div>
+<app-heroe-detalle [heroe]="seleccionadoHeroe"></app-heroe-detalle>
